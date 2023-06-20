@@ -1,0 +1,1000 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+/* ---------------------------------- 定义常变量 --------------------------------- */
+:root {
+    /* 背景颜色 */
+    --side-menu-btn-color: rgb(32, 35, 40);
+    /* 边框颜色 */
+    --sider-menue-border: rgba(32, 204, 238, 0.753);
+    /* 边框鼠标经过颜色 */
+    --sider-menue-border-hover: rgba(251, 162, 18, 0.725);
+    --annotation: rgb(88, 144, 92);
+}
+
+/* -------------------------------------------------------------------------- */
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    color: var(--side-menu-btn-color);
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.content h1 {
+    font-family: 'Lobster', cursive;
+    font-weight: 300;
+    font-size: 2.5em;
+}
+
+.sidebar-btn {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+
+label[for="sidebar-btn"] {
+    position: fixed;
+    left: 0px;
+    top: 15px;
+    bottom: 15px;
+    z-index: 2;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect style='fill:rgb(32,204,238)' width='15' height='3'/><rect style='fill:rgb(32,204,238)' y='8' width='20' height='3'/><rect style='fill:rgb(32,204,238)' y='16' width='25' height='3'/></svg>");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+label[for="sidebar-btn"]:hover {
+    border-color: var(--sider-menue-border-hover);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect style='fill:rgb(251,162,18)' width='15' height='3'/><rect style='fill:rgb(251, 162,18)' y='8' width='20' height='3'/><rect style='fill:rgb(251,162,18)' y='16' width='25' height='3'/></svg>");
+    opacity: 0.7;
+}
+
+.sidebar-btn+label,
+.content {
+    transition: left 0.1s;
+}
+
+.sidebar-btn:checked+label {
+    left: 230px;
+}
+
+.sidebar-btn:checked~.content {
+    left: 230px;
+}
+
+.sidebar {
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    border-color: var(--sider-menue-border);
+    border-style: solid;
+    border-width: 1px;
+    background-color: var(--side-menu-btn-color);
+}
+
+.sidebar li {
+    background-color: var(--side-menu-btn-color);
+    /* position: absolute; */
+    padding: 1em;
+    color: #fff;
+    width: 300px;
+    height: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    border-color: var(--sider-menue-border);
+    border-style: solid;
+    border-width: 1px;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 50ms;
+    -o-transition-duration: 50ms;
+    -webkit-transition-duration: 50ms;
+    transition-duration: 50ms;
+    -moz-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+}
+
+.sidebar li:hover {
+    background-color: #303039;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 50ms;
+    -o-transition-duration: 50ms;
+    -webkit-transition-duration: 50ms;
+    transition-duration: 50ms;
+    -moz-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+}
+
+.sidebar li a p {
+    background-color: #ffffff00;
+    display: inline-block;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    width: 210px;
+    height: 35px;
+    line-height: 40px;
+    position: relative;
+    bottom: 52%;
+    right: 12px;
+    padding: 3px;
+    text-align: left;
+    border-color: #ffffff00;
+    border-style: solid;
+    border-width: 1.5px;
+}
+
+.sidebar li a p:hover {
+    background-color: #ffffff00;
+    display: inline-block;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    width: 210px;
+    height: 35px;
+    line-height: 40px;
+    position: relative;
+    bottom: 52%;
+    right: 12px;
+    padding: 3px;
+    text-align: left;
+    border-color: var(--sider-menue-border-hover);
+    border-style: dashed;
+    border-width: 1.5px;
+}
+
+.sidebar li a:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar li a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar li a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 父元素 */
+.content {
+    min-height: 6920px;
+    min-width: 100%;
+    color: #ffffff;
+    border-color: var(--sider-menue-border);
+    border-style: solid;
+    border-width: 1px;
+    background-color: var(--side-menu-btn-color);
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+    padding: 4em;
+}
+
+/* 通过伪元素来设置背景半透明，不会影响到其他元素 */
+.content::before {
+    /* 必须设置 content 属性 */
+    content: '';
+    /* 设置成块级元素才能设置宽高 */
+    display: block;
+    /* 设置元素的透明度为 半透明 */
+    opacity: 0.2;
+    /* 子元素设置为绝对定位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 显示在标准元素层级的下面 */
+    z-index: -1;
+    /* 将宽高设置为父元素的百分之百 */
+    min-width: 100%;
+    min-height: 100%;
+    /* 通过伪元素来设置背景色 */
+    background-image: url(./image/Background.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 1920px, 950px;
+}
+
+.navigation-right {
+    display: block;
+    width: 400px;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 6;
+    border-color: var(--sider-menue-border);
+    border-style: solid;
+    border-width: 2px;
+    list-style-type: none;
+    color: #ffffff;
+    background-color: var(--side-menu-btn-color);
+}
+
+.navigation-right li {
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 2px;
+
+}
+
+.navigation-right li div {
+    position: relative;
+    bottom: 7px;
+}
+
+.navigation-right-translation img,
+.navigation-right-help img {
+    border-color: #ffffff00;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.navigation-right-translation img:hover {
+    border-color: var(--sider-menue-border-hover);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.navigation-right-help img:hover {
+    border-color: var(--sider-menue-border-hover);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.navigation-right-details1 {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 150px;
+    z-index: 20;
+    position: fixed;
+    right: 240px;
+    top: 40px;
+    color: #ffffff;
+    background-color: var(--side-menu-btn-color);
+    border-color: var(--sider-menue-border);
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0;
+    transition-property: inherit;
+    transition-duration: 300ms;
+}
+
+.navigation-right-details2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 300px;
+    z-index: 20;
+    position: fixed;
+    right: 50px;
+    top: 40px;
+    color: #ffffff;
+    background-color: var(--side-menu-btn-color);
+    border-color: var(--sider-menue-border);
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0;
+    transition-property: inherit;
+    transition-duration: 300ms;
+}
+
+
+.navigation-right-translation:hover~.navigation-right-details1 {
+    opacity: 0.8;
+}
+
+.navigation-right-help:hover~.navigation-right-details2 {
+    opacity: 0.8;
+}
+
+.arrow-bar {
+    z-index: 50;
+    position: fixed;
+    top: 520px;
+    right: 20px;
+}
+
+.arrow-bar ul li {
+    list-style-type: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 5px;
+    border-color: var(--sider-menue-border);
+    border-style: double;
+    border-width: 2px;
+}
+
+.introduction-space {
+    min-width: 100%;
+    min-height: 900px;
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+
+.eduction-space {
+    min-width: 100%;
+    min-height: 900px;
+    position: absolute;
+    top: 900px;
+    z-index: -1;
+}
+
+.experience-space {
+    min-width: 100%;
+    min-height: 900px;
+    position: absolute;
+    top: 1800px;
+    z-index: -1;
+}
+
+.publication-space {
+    min-width: 100%;
+    min-height: 900px;
+    position: absolute;
+    top: 2700px;
+    z-index: -1;
+}
+
+.projects-space {
+    min-width: 100%;
+    min-height: 900px;
+    position: absolute;
+    top: 3600px;
+    z-index: -1;
+}
+
+.awards-space {
+    min-width: 100%;
+    min-height: 900px;
+    position: absolute;
+    top: 4500px;
+    z-index: -1;
+}
+
+.skills-space {
+    min-width: 100%;
+    min-height: 900px;
+    position: absolute;
+    top: 5400px;
+    z-index: -1;
+}
+
+.contact-space {
+    min-width: 100%;
+    min-height: 100px;
+    position: absolute;
+    top: 6300px;
+    z-index: -1;
+}
+
+.introduction-section {
+    min-width: 1920px;
+    min-height: 650px;
+    position: relative;
+    top: 20px;
+}
+
+.education-section {
+    min-width: 1920px;
+    min-height: 650px;
+}
+
+.experience-section {
+    min-width: 1920px;
+    min-height: 650px;
+}
+
+.publication-section {
+    min-width: 1920px;
+    min-height: 650px;
+}
+
+.projects-section {
+    min-width: 1920px;
+    min-height: 650px;
+}
+
+.awards-section {
+    min-width: 1920px;
+    min-height: 650px;
+}
+
+.skills-section {
+    min-width: 1920px;
+    min-height: 650px;
+}
+
+.contact-section {
+    min-width: 1920px;
+    min-height: 450px;
+}
+
+.head-code {
+    display: inline-block;
+    width: 500px;
+    height: 20px;
+    text-decoration: none;
+    position: relative;
+    bottom: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+.main-head {
+    clear: both;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.annotation {
+    clear: both;
+    color: var(--annotation);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.profile {
+    position: absolute;
+    top: 320px;
+    left: 650px;
+    padding: 10px;
+    border-color: var(--sider-menue-border);
+    border-style: double;
+    border-width: 2px;
+}
+
+.hi-iam {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--annotation);
+}
+
+.introduction-main {
+    text-decoration: underline;
+    display: inline-block;
+    width: 600px;
+    position: relative;
+    bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.CV {
+    position: relative;
+    bottom: 35px;
+    width: 150px;
+    height: 30px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    border-color: var(--sider-menue-border);
+    border-style: double;
+    border-width: 2px;
+}
+
+.CV:hover {
+    border-color: var(--sider-menue-border-hover);
+}
+
+.next-page-button-introduction {
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+    text-decoration: none;
+    position: absolute;
+    right: 1420px;
+    bottom: 52px;
+    text-align: center;
+}
+
+.next-page-main {
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    float: left;
+    color: #84e4f8;
+}
+
+.next-page-tag {
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    float: left;
+    color: #c69d4f;
+}
+
+.next-page-symbol {
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    float: left;
+    color: #afafaf;
+}
+
+.next-page-class {
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    float: left;
+    color: #35b1d6;
+}
+
+.divider {
+    border-color: var(--sider-menue-border);
+    width: 900px;
+}
+
+
+
+.GPA-style {
+    position: relative;
+    left: 150px;
+    clear: both;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: underline;
+}
+
+.download-GPA {
+    position: relative;
+    left: 215px;
+    top: 10px;
+    padding-top: 10px;
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    clear: both;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    border-color: var(--sider-menue-border);
+    border-style: double;
+    border-width: 2px;
+}
+
+.download-GPA:hover {
+    border-color: var(--sider-menue-border-hover);
+}
+
+.lecture-list {
+    display: inline-block;
+    width: 400px;
+    position: relative;
+    left: 3%;
+    font-size: 17px;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 52px;
+    border-color: var(--sider-menue-border);
+    border-style: double;
+    border-width: 2px;
+    padding-left: 20px;
+}
+
+.next-page-button-education {
+    clear: both;
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+    text-decoration: none;
+    position: relative;
+    right: 1055px;
+    top: 110px;
+    text-align: center;
+}
+
+
+.next-page-button-experience {
+    clear: both;
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+    text-decoration: none;
+    position: relative;
+    right: 95px;
+    top: 50px;
+    text-align: center;
+}
+
+.paper-link:link {
+    color: #ffffff;
+    text-decoration: underline;
+    transition-property: inherit;
+    transition-duration: 100ms;
+}
+
+.paper-link:visited {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.paper-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    transition-property: inherit;
+    transition-duration: 100ms;
+}
+
+.paper-link:active {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.publication-gallery {
+    height: 300px;
+}
+
+.publication-gallery li {
+    float: left;
+    list-style-type: none;
+    width: 175px;
+    height: 225px;
+    border-color: var(--sider-menue-border);
+    border-style: double;
+    border-width: 2px;
+    padding: 5px;
+    margin: 30px;
+}
+
+.publication-gallery li:hover {
+    border-color: var(--sider-menue-border-hover);
+}
+
+.next-page-button-publication {
+    clear: both;
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+    text-decoration: none;
+    position: relative;
+    right: 0px;
+    top: 70px;
+    text-align: center;
+}
+
+.projects-list-img {
+    float: left;
+    margin-right: 30px;
+}
+
+.projects-list-img img {
+    padding: 5px;
+    border-width: 1px;
+    border-color: var(--sider-menue-border);
+    border-style: double;
+}
+
+.projects-list {
+    height: 400px;
+    clear: both;
+    font-size: 20px;
+    line-height: 30px;
+    list-style-type: none;
+    overflow-y: scroll;
+}
+
+.projects-list li {
+    clear: both;
+}
+
+.projects-list-block {
+    display: inline-block;
+    width: 700px;
+
+}
+
+
+.next-page-button-projects {
+    clear: both;
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+    text-decoration: none;
+    position: relative;
+    right: 0px;
+    top: 10px;
+    text-align: center;
+}
+
+.awards-national {
+    height: 150px;
+    overflow-y: scroll;
+}
+
+.awards-region {
+    height: 150px;
+    overflow-y: scroll;
+}
+
+.awards-scholarship {
+    height: 55px;
+    overflow-y: scroll;
+}
+
+.awards-link:link {
+    color: #ffffff;
+    transition-property: inherit;
+    transition-duration: 100ms;
+    text-decoration: none;
+}
+
+.awards-link:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.awards-link:hover {
+    color: var(--sider-menue-border-hover);
+    transition-property: inherit;
+    transition-duration: 100ms;
+    text-decoration: none;
+}
+
+.awards-link:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.awards-section ul {
+    clear: both;
+    font-size: 17px;
+    line-height: 30px;
+    display: inline-block;
+    width: 850px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.next-page-button-awards {
+    clear: both;
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+    text-decoration: none;
+    position: relative;
+    top: 10px;
+    right: 95px;
+    text-align: center;
+}
+
+.skills-section ul {
+    clear: both;
+    font-size: 20px;
+    line-height: 30px;
+    line-height: 40px;
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.language-bar {
+    color: #66e3fc;
+    opacity: 1;
+    font-size: 15px;
+}
+
+.software-list {
+    position: relative;
+    left: 30px;
+}
+
+.software-list ul {
+    clear: both;
+    height: 60px;
+    border-width: 2px;
+    border-color: var(--sider-menue-border);
+    border-style: double;
+}
+
+.software-list ul li {
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    border-width: 1px;
+    border-color: var(--sider-menue-border);
+    border-style: inherit;
+    transition-property: inherit;
+    transition-duration: 500ms;
+}
+
+.software-list ul li :hover {
+    border-width: 1px;
+    border-color: var(--sider-menue-border-hover);
+    border-style: dashed;
+    box-shadow: #111112;
+    transition-property: inherit;
+    transition-duration: 500ms;
+}
+
+.software-details {
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+    font-size: 13px;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    width: 60px;
+    line-height: 17px;
+    text-align: center;
+    border-color: var(--sider-menue-border);
+    border-style: inherit;
+    opacity: 0;
+}
+
+/* 控制兄弟关系两个元素的hover */
+.software-list ul li :hover+.software-details {
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+    font-size: 13px;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    width: 60px;
+    line-height: 17px;
+    text-align: center;
+    border-width: 1px;
+    border-color: var(--sider-menue-border);
+    border-style: inherit;
+    opacity: 1;
+    transition-property: inherit;
+    transition-duration: 500ms;
+    background-color: var(--side-menu-btn-color);
+}
+
+.next-page-button-skills {
+    clear: both;
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+    text-decoration: none;
+    position: relative;
+    top: 40px;
+    right: 95px;
+    text-align: center;
+}
+
+.gallery-block-outer {}
+
+.gallery-block-inner1 {
+    display: inline-block;
+    width: 200px;
+    height: 500px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-arrow-color: #059beb;
+    /*顶部/底部图标颜色*/
+    scrollbar-face-color: #06c1eb;
+    /*滚动条颜色*/
+    scrollbar-shadow-color: #999;
+    /*滚动条阴影颜色*/
+    border-width: 1px;
+    border-color: var(--sider-menue-border-hover);
+    border-style: inherit;
+}
+
+/* .gallery-block-inner1 {
+    border-width: 1px;
+    border-color: var(--sider-menue-border);
+    border-style: inherit;
+} */
+
+.gallery-block-inner1 ul li {
+    height: auto;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-width: 1px;
+    border-color: var(--sider-menue-border);
+    border-style: double;
+}
+
+.contact-section-list {
+    list-style-type: none
+}
+
+.contact-section-list li {
+    margin-top: 30px;
+}
+
+.contact-section-list li img {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.foot {
+    z-index: 50;
+    height: 253px;
+    width: 100%;
+    background-color: var(--side-menu-btn-color);
+    position: absolute;
+    left: 0px;
+    border-width: 1px;
+    border-color: var(--sider-menue-border);
+    border-style: inherit;
+    padding: 30px;
+}
+
+.foot-list {
+    list-style-type: none;
+    float: left;
+}
+
+.foot-list li {
+    float: left;
+    margin: 20px;
+    color: var(--sider-menue-border);
+    font-size: 17px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.foot-list li:hover {
+    color: #84e4f8;
+}
+
+.foot-list-img {
+    list-style-type: none;
+    position: relative;
+    left: 200px;
+
+}
+
+.foot-list-img li {
+    float: left;
+    margin: 20px;
+}
