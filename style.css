@@ -341,7 +341,6 @@ label[for="sidebar-btn"]:hover {
 }
 
 .arrow-bar {
-    background-color: var(--side-menu-btn-color);
     z-index: 50;
     position: fixed;
     bottom: 10px;
@@ -349,6 +348,7 @@ label[for="sidebar-btn"]:hover {
 }
 
 .arrow-bar ul li {
+    background-color: var(--side-menu-btn-color);
     list-style-type: none;
     margin-top: 50px;
     margin-bottom: 50px;
