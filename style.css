@@ -729,7 +729,7 @@ label[for="sidebar-btn"]:hover {
     height: 400px;
     width: 1000px;
     clear: both;
-    font-size: 20px;
+
     line-height: 30px;
     list-style-type: none;
     overflow-y: scroll;
@@ -743,6 +743,17 @@ label[for="sidebar-btn"]:hover {
     display: inline-block;
     width: 700px;
 
+}
+
+.projects-list-block-main {
+    font-size: 20px;
+}
+
+.projects-list-block-sub {
+    font-size: 15px;
+    line-height: 15px;
+    width: 90%;
+    color: #999;
 }
 
 
