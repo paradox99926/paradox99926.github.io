@@ -513,7 +513,7 @@ label[for="sidebar-btn"]:hover {
 }
 
 .introduction-main {
-    text-decoration: underline;
+    text-decoration: none;
     display: inline-block;
     width: 600px;
     position: relative;
