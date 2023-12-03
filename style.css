@@ -517,7 +517,7 @@ label[for="sidebar-btn"]:hover {
     display: inline-block;
     width: 600px;
     position: relative;
-    bottom: 30px;
+    bottom: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: 'Ubuntu', sans-serif;
@@ -527,7 +527,7 @@ label[for="sidebar-btn"]:hover {
 
 .CV {
     position: relative;
-    bottom: 35px;
+    bottom: 45px;
     width: 150px;
     height: 30px;
     padding-top: 5px;
@@ -549,7 +549,7 @@ label[for="sidebar-btn"]:hover {
     height: 40px;
     text-decoration: none;
     position: relative;
-    bottom: 20px;
+    bottom: 40px;
     text-align: center;
 }
 
